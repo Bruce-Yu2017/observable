@@ -1,0 +1,63 @@
+<!-- <h1>{{ user }}</h1>
+<input type="text" [(ngModel)]="editUser">
+<button class="btn btn-primary" (click)="editTheUser()">Change</button> -->
+
+<!-- <div class="card" style="width: 18rem;" *ngFor="let listItem of productList">
+  <img class="card-img-top" alt="Card image cap" [src]="listItem.image">
+  <div class="card-body">
+    <h5 class="card-title">{{ listItem.name }}</h5>
+    <p class="card-text">
+      {{ listItem.description }}
+    </p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      {{ listItem.units }}
+    </li>
+  </ul>
+</div> -->
+
+<div class="col-md-12">
+  <h3>One Component {{ user }}</h3>
+</div>
+<div class="container">
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" [src]="defaultImg" alt="Card image cap">
+
+  </div>
+</div>
+<div>
+  <table>
+    <tr *ngFor="let product of productList">
+      <td>{{product.name}}
+          <button class="btn btn-danger" (click)="deleteContact(product.name)">Delete</button>
+      </td>
+    </tr>
+  </table>
+  <!-- <ul>
+    <li *ngFor="let contact of contactList">
+      {{ contact.name }}
+      <button class="btn btn-danger" (click)="deleteContact(contact.name)">Delete</button>
+    </li>
+  </ul> -->
+</div>
+<br>
+<div class="container">
+  <form #myForm="ngForm" (submit)="addContact(); myForm.reset()">
+    <input type="text" placeholder="Enter name" [(ngModel)]="txtName" name="name">
+    <button class="bt btn-primary" type="submit">
+      Add Contact
+    </button>
+  </form>
+</div>
+<br>
+<div class="container">
+  <input type="text" placeholder="search..." (keyup)="onKeyup($event)">
+  <button class="bt btn-success" type="submit" (click)="getUsers()">
+    Search
+  </button>
+</div>
+<p>{{ searchCount }}</p>
+<ul *ngIf="searchResult">
+  <li *ngFor="let result of searchResult.items">{{ result.login }}</li>
+</ul>

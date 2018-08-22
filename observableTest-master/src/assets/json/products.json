@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Image 1",
+        "image": "assets/images/1.jpg",
+        "description": "Lamber Car",
+        "units": "number"
+    },
+    {
+        "name": "Image 2",
+        "image": "assets/images/2.jpg",
+        "description": "Farrari Car",
+        "units": "number"
+    },
+    {
+        "name": "Image 3",
+        "image": "assets/images/3.jpg",
+        "description": "Merci Car",
+        "units": "number"
+    },
+    {
+        "name": "Image 4",
+        "image": "assets/images/4.jpg",
+        "description": "RX Car",
+        "units": "number"
+    }
+]
